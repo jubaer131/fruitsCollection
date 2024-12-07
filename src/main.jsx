@@ -15,6 +15,8 @@ import Orange from "./AllRouts/Orange";
 import Grapes from "./AllRouts/Grapes";
 import Pineapple from "./AllRouts/Pineapple";
 import Watermelon from "./AllRouts/Watermelon";
+import Spinach from "./AllRouts/Spinach";
+import Carrot from "./AllRouts/Carrot";
 
 
 const router = createBrowserRouter([
@@ -53,6 +55,14 @@ const router = createBrowserRouter([
       {
         path: "/watermelon",
         element: <Watermelon></Watermelon>,
+      },
+      {
+        path: "/spinach",
+        element: <Spinach></Spinach>,
+      },
+      {
+        path: "/carrot",
+        element: <Carrot></Carrot>,
       },
     ],
   },

@@ -1,7 +1,5 @@
 
 
-
-
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
@@ -9,14 +7,14 @@ import { GrLinkedinOption } from "react-icons/gr";
 import { IoLogoTwitter, IoIosStarOutline } from "react-icons/io";
 import { IoStar } from "react-icons/io5";
 
-const Watermelon = () => {
+const Spinach = () => {
     const [items, setItems] = useState(null);
 
     useEffect(() => {
         fetch('https://online-market-server-rosy.vercel.app/fruits')
             .then(res => res.json())
             .then(data => {
-                const appleItem = data.find(fruit => fruit.name.trim() === 'Watermelon');
+                const appleItem = data.find(fruit => fruit.name.trim() === 'Spinach');
                 setItems(appleItem);
             });
     }, []);
@@ -99,4 +97,4 @@ const Watermelon = () => {
     );
 };
 
-export default Watermelon;
+export default Spinach;

@@ -1,16 +1,16 @@
 
-import { Link, Outlet } from "react-router-dom";
-import { FaFacebook } from "react-icons/fa";
-import { GrLinkedinOption } from "react-icons/gr";
-import { FaInstagram } from "react-icons/fa";
-import { IoLogoTwitter } from "react-icons/io5";
-import { IoStar } from "react-icons/io5";
-import { IoIosStarOutline } from "react-icons/io";
+import { Outlet } from "react-router-dom";
+// import { FaFacebook } from "react-icons/fa";
+// import { GrLinkedinOption } from "react-icons/gr";
+// import { FaInstagram } from "react-icons/fa";
+// import { IoLogoTwitter } from "react-icons/io5";
+// import { IoStar } from "react-icons/io5";
+// import { IoIosStarOutline } from "react-icons/io";
 
 const Context = () => {
     return (
         <main className="flex-1 ">
-            <section className="bg-white shadow-sm rounded-xl p-6 mb-6 flex justify-between">
+            {/* <section className="bg-white shadow-sm rounded-xl p-6 mb-6 flex justify-between">
                 <div className="py-16 px-10 space-y-5">
                     <div className="w-8 h-8 rounded-full bg-[#2684fc] flex justify-center items-center">
                         <Link to="#"><FaFacebook className="text-xl text-white" /></Link>
@@ -80,7 +80,7 @@ const Context = () => {
                 </div>
 
 
-            </section>
+            </section> */}
             <Outlet></Outlet>
         </main>
     );

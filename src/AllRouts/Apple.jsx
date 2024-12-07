@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { GrLinkedinOption } from "react-icons/gr";
-import { IoLogoTwitter, IoStar, IoIosStarOutline } from "react-icons/io";
+import { IoLogoTwitter, IoIosStarOutline } from "react-icons/io";
+import { IoStar } from "react-icons/io5";
 
 const Apple = () => {
     const [items, setItems] = useState(null);
@@ -21,8 +22,8 @@ const Apple = () => {
     return (
         <div>
             {items ? (
-                <section className="bg-white shadow-sm rounded-xl p-6 mb-6 flex justify-between">
-                    <div className="py-16 px-10 space-y-5">
+                <section className="bg-white shadow-sm rounded-xl p-6 mb-6 lg:flex  justify-between">
+                    <div className="lg:py-16  lg:px-10  space-y-5 max-sm:hidden">
                         <div className="w-8 h-8 rounded-full bg-[#2684fc] flex justify-center items-center">
                             <Link to="#"><FaFacebook className="text-xl text-white" /></Link>
                         </div>
@@ -37,43 +38,42 @@ const Apple = () => {
                             <Link to="#"><FaInstagram className="text-xl text-white" /></Link>
                         </div>
                     </div>
-                    <div>
+                    <div className="p-3">
                         <div className="md:flex justify-between ">
-                            <div className="w-1/2">
-                                <h1 className="text-5xl font-bold mb-6">Health Benefits of an Avocado</h1>
+                            <div className="lg:w-1/2">
+                                <h1 className="lg:text-5xl text-2xl font-bold mb-6">Health Benefits of an{items.name}</h1>
                                 <div className="pb-2">
-                                    <h3 className="text-xl font-bold my-1">Rich in Nutrients</h3>
-                                    <p>{items.description}</p>
+                                    <h3 className="text-xl font-bold my-1">{items.title1}</h3>
+                                    <p>{items.description1.slice(0, 200)}</p>
                                 </div>
                                 <div className="pb-2">
-                                    <h3 className="text-xl font-bold my-1">Improves Eye Health</h3>
-                                    <p>{items.description}</p>
+                                    <h3 className="text-xl font-bold my-1">{items.title2}</h3>
+                                    <p>{items.description2.slice(0, 200)}</p>
                                 </div>
                             </div>
-                            <div className="w-1/2">
+                            <div className="lg:w-1/2">
                                 <img
-                                    src={items.image}
+                                    src={items.image1}
                                     alt={items.name}
                                     className="rounded-md mb-4 h-80 float-right"
                                 />
                             </div>
                         </div>
                         <div className="py-5">
-                            <h1 className="text-xl font-bold pb-2">Natural Energy Booster</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo neque quae optio nihil pariatur fugiat labore voluptas ratione molestias velit omnis nobis enim, quibusdam quos. Dolores, corporis voluptates. Accusamus, eligendi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo neque quae optio nihil pariatur fugiat labore voluptas ratione molestias velit omnis nobis enim, quibusdam quos. Dolores, corporis voluptates. Accusamus, eligendi!</p>
+                            <h1 className="text-xl font-bold pb-2">{items.title3}</h1>
+                            <p>{items.description3} </p>
                         </div>
                         <div className="md:flex justify-between ">
-                            <div className="w-1/2">
+                            <div className="lg:w-1/2">
                                 <img
-                                    src={items.image}
+                                    src={items.image2}
                                     alt={items.name}
                                     className="rounded-3xl mb-4 h-80 float-start "
                                 />
                             </div>
-                            <div className="w-1/2 py-16">
-                                <h1 className="text-xl font-bold mb-2">Boosts Immunity</h1>
-                                <h3>Rich in Nutrients</h3>
-                                <p>{items.description}</p>
+                            <div className="lg:w-1/2 py-16">
+                                <h1 className="text-xl font-bold mb-2">{items.title4}</h1>
+                                <p>{items.description4}</p>
                             </div>
                         </div>
                         <div className="py-8">

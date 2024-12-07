@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const Sidebar = () => {
 
@@ -20,7 +21,7 @@ const Sidebar = () => {
                     className="text-gray-700 text-lg focus:outline-none"
                     onClick={toggleMenu}
                 >
-                    🍔 Menu
+                    <IoMdArrowDropdown className='text-4xl font-bold' />
                 </button>
             </div>
 
@@ -30,32 +31,32 @@ const Sidebar = () => {
                 <div className="space-y-4 p-6">
                     <div className="">
                         <Tabs>
-                            <TabList className="border-b-2 border-gray-300 bg-gray-100 w-full flex my-4 rounded-xl">
-                                <Tab className="px-4 py-2 text-gray-700 hover:bg-gray-200 w-full">
-                                    <button className='w-full max-w-xs outline-none'>Fruit List</button>
+                            <TabList className="border-2 border-[#f5dbd2] bg-[#fceee9]  w-full flex my-4 rounded-xl ">
+                                <Tab className="px-4 py-2 text-orange-500  w-full">
+                                    <button className='w-full max-w-xs  outline-none'>Fruit List</button>
                                 </Tab>
-                                <Tab className="px-4 py-2 text-gray-700 hover:bg-gray-200 w-full">
+                                <Tab className="px-4 py-2 text-orange-500  w-full">
 
-                                    <button className='w-full max-w-xs outline-none'>Fruit List</button>
+                                    <button className='w-full max-w-xs  outline-none'>Fruit List</button>
                                 </Tab>
                             </TabList>
                             <TabPanel>
 
                                 <div className="relative ">
                                     <form className="w-full max-w-md mx-auto ">
-                                        <label className="input input-bordered flex items-center gap-2 px-4 py-4 border rounded-lg shadow-sm">
+                                        <label className="input input-bordered flex items-center gap-2 px-4 py-4 pr-0 border rounded-lg shadow-sm">
                                             <input
                                                 type="text"
                                                 name="searchInput"
                                                 className="grow outline-none lg:w-64"
                                                 placeholder="Search"
                                             />
-                                            <button type="submit" className="flex items-center justify-center">
+                                            <button type="submit" className="flex items-center justify-center bg-[#f9f0ed] lg:h-11 lg:w-16 rounded-md">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 16 16"
                                                     fill="currentColor"
-                                                    className="h-4 w-4 opacity-70"
+                                                    className="lg:h-6 lg:w-6 opacity-70"
                                                 >
                                                     <path
                                                         fillRule="evenodd"
@@ -221,7 +222,8 @@ const Sidebar = () => {
                                     <ul className="pt-2 pb-4  text-sm space-y-2">
                                         <li className="rounded-sm ">
                                             <NavLink
-                                                to=""
+
+                                                to="/spinach"
                                                 className={({ isActive }) =>
                                                     `flex items-center gap-4 w-full p-3 rounded-lg ${isActive ? "text-blue-500 font-bold border border-red-300" : "text-gray-700"
                                                     }`
@@ -229,15 +231,15 @@ const Sidebar = () => {
                                             >
                                                 <span>
                                                     <img
-                                                        className="w-8 h-8"
-                                                        src="https://i.ibb.co/0JpT46X/1000-F-241307210-Mjja-JC3-SJy2z-JZ6-B7b-KGMRs-KQbdw-RSze.jpg"
+                                                        className="w-8 h-8 mask mask-diamond"
+                                                        src="https://i.ibb.co.com/T200mpt/fresh-green-spinach-leaves-58830-877.jpg"
                                                         alt="Home Icon"
                                                     />
                                                 </span>
-                                                <span>Home</span>
+                                                <span>Spinach</span>
                                             </NavLink>
                                             <NavLink
-                                                to=""
+                                                to="/carrot"
                                                 className={({ isActive }) =>
                                                     `flex items-center gap-4 w-full p-3 rounded-lg ${isActive ? "text-blue-500 font-bold border border-red-300" : "text-gray-700"
                                                     }`
@@ -245,93 +247,14 @@ const Sidebar = () => {
                                             >
                                                 <span>
                                                     <img
-                                                        className="w-8 h-8"
-                                                        src="https://i.ibb.co/0JpT46X/1000-F-241307210-Mjja-JC3-SJy2z-JZ6-B7b-KGMRs-KQbdw-RSze.jpg"
+                                                        className="w-8 h-8 mask mask-diamond"
+                                                        src="https://i.ibb.co.com/L51yps8/fresh-vibrant-carrot-vector-illustrations-elevate-your-designs-1132808-885.jpg"
                                                         alt="Home Icon"
                                                     />
                                                 </span>
-                                                <span>Home</span>
+                                                <span>Carrot</span>
                                             </NavLink>
-                                            <NavLink
-                                                to=""
-                                                className={({ isActive }) =>
-                                                    `flex items-center gap-4 w-full p-3 rounded-lg ${isActive ? "text-blue-500 font-bold border border-red-300" : "text-gray-700"
-                                                    }`
-                                                }
-                                            >
-                                                <span>
-                                                    <img
-                                                        className="w-8 h-8"
-                                                        src="https://i.ibb.co/0JpT46X/1000-F-241307210-Mjja-JC3-SJy2z-JZ6-B7b-KGMRs-KQbdw-RSze.jpg"
-                                                        alt="Home Icon"
-                                                    />
-                                                </span>
-                                                <span>Home</span>
-                                            </NavLink>
-                                            <NavLink
-                                                to=""
-                                                className={({ isActive }) =>
-                                                    `flex items-center gap-4 w-full p-3 rounded-lg ${isActive ? "text-blue-500 font-bold border border-red-300" : "text-gray-700"
-                                                    }`
-                                                }
-                                            >
-                                                <span>
-                                                    <img
-                                                        className="w-8 h-8"
-                                                        src="https://i.ibb.co/0JpT46X/1000-F-241307210-Mjja-JC3-SJy2z-JZ6-B7b-KGMRs-KQbdw-RSze.jpg"
-                                                        alt="Home Icon"
-                                                    />
-                                                </span>
-                                                <span>Home</span>
-                                            </NavLink>
-                                            <NavLink
-                                                to=""
-                                                className={({ isActive }) =>
-                                                    `flex items-center gap-4 w-full p-3 rounded-lg ${isActive ? "text-blue-500 font-bold border border-red-300" : "text-gray-700"
-                                                    }`
-                                                }
-                                            >
-                                                <span>
-                                                    <img
-                                                        className="w-8 h-8"
-                                                        src="https://i.ibb.co/0JpT46X/1000-F-241307210-Mjja-JC3-SJy2z-JZ6-B7b-KGMRs-KQbdw-RSze.jpg"
-                                                        alt="Home Icon"
-                                                    />
-                                                </span>
-                                                <span>Home</span>
-                                            </NavLink>
-                                            <NavLink
-                                                to=""
-                                                className={({ isActive }) =>
-                                                    `flex items-center gap-4 w-full p-3 rounded-lg ${isActive ? "text-blue-500 font-bold border border-red-300" : "text-gray-700"
-                                                    }`
-                                                }
-                                            >
-                                                <span>
-                                                    <img
-                                                        className="w-8 h-8"
-                                                        src="https://i.ibb.co/0JpT46X/1000-F-241307210-Mjja-JC3-SJy2z-JZ6-B7b-KGMRs-KQbdw-RSze.jpg"
-                                                        alt="Home Icon"
-                                                    />
-                                                </span>
-                                                <span>Home</span>
-                                            </NavLink>
-                                            <NavLink
-                                                to=""
-                                                className={({ isActive }) =>
-                                                    `flex items-center gap-4 w-full p-3 rounded-lg ${isActive ? "text-blue-500 font-bold border border-red-300" : "text-gray-700"
-                                                    }`
-                                                }
-                                            >
-                                                <span>
-                                                    <img
-                                                        className="w-8 h-8"
-                                                        src="https://i.ibb.co/0JpT46X/1000-F-241307210-Mjja-JC3-SJy2z-JZ6-B7b-KGMRs-KQbdw-RSze.jpg"
-                                                        alt="Home Icon"
-                                                    />
-                                                </span>
-                                                <span>Home</span>
-                                            </NavLink>
+
                                         </li>
                                     </ul>
                                 </div>

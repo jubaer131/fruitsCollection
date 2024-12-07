@@ -10,19 +10,19 @@ const Header = () => {
             </div>
             <div>
                 <form className="w-full max-w-md mx-auto ">
-                    <label className="input input-bordered flex items-center gap-2 px-4 py-2 border rounded-lg shadow-sm">
+                    <label className="input input-bordered flex items-center gap-2 px-4 py-2 border rounded-lg shadow-sm pr-0">
                         <input
                             type="text"
                             name="searchInput"
                             className="grow outline-none lg:w-64"
-                            placeholder="Search"
+                            placeholder="Search Best Food"
                         />
-                        <button type="submit" className="flex items-center justify-center">
+                        <button type="submit" className="flex items-center justify-center bg-[#f9f0ed] lg:h-11 lg:w-11 rounded-md">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 16 16"
                                 fill="currentColor"
-                                className="h-4 w-4 opacity-70"
+                                className="lg:h-6 lg:w-6 opacity-70"
                             >
                                 <path
                                     fillRule="evenodd"
@@ -39,17 +39,17 @@ const Header = () => {
 
 
                     <li>
-                        <div className="lg:w-10 lg:h-10  bg-slate-100 flex justify-center items-center">
+                        <div className="lg:w-10 lg:h-10 rounded-md  bg-[#f9f0ed] flex justify-center items-center">
                             <IoSunnySharp />
                         </div>
                     </li>
                     <li>
-                        <div className="lg:w-10 lg:h-10 bg-slate-100 flex justify-center items-center max-sm:hidden">
+                        <div className="lg:w-10 lg:h-10 rounded-md bg-[#f9f0ed] flex justify-center items-center max-sm:hidden">
                             <BsJournalText />
                         </div>
                     </li>
                     <li>
-                        <div className="lg:w-10 lg:h-10 bg-slate-100 flex justify-center items-center">
+                        <div className="lg:w-10 lg:h-10 rounded-md bg-slate-100 flex justify-center items-center">
                             <RxHamburgerMenu />
                         </div>
                     </li>

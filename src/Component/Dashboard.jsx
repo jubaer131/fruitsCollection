@@ -1,4 +1,4 @@
-import Content from "./Context";
+import Context from "./Context";
 import Header from "./Header";
 import SettingsPanel from "./SettingsPanel";
 import Sidebar from "./Sidebar";
@@ -14,7 +14,7 @@ const Dashboard = () => {
                     <Sidebar />
                 </div>
                 <div className="col-span-8">
-                    <Content />
+                    <Context />
                 </div>
                 <div className="col-span-2">
                     <SettingsPanel></SettingsPanel>
